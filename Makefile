@@ -31,8 +31,8 @@ build: $(LIB) package.json
 
 build-browser: browser/type-check.js
 
-test: build
-	$(MOCHA) --ui tdd --require livescript "test/**/*.ls"
+test:
+	$(MOCHA) --ui tdd --require livescript "test/**/*.ls" "test/**/*.js"
 
 dev-install: package.json
 	npm install .
